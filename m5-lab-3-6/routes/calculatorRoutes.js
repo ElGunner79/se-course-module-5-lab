@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-//Lab 6.
+//Lab 6.1.
 const calculatorController = require ('../controllers/calculatorController');
 
 //Lab 3.
@@ -41,7 +41,7 @@ const calculatorController = require ('../controllers/calculatorController');
 // })
 
 
-//Lab 6.
+//Lab 6.1.
 router.get('/add', (req, res) => {
     calculatorController.addNumbers(req, res);
 });

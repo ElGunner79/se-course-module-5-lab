@@ -1,4 +1,4 @@
-//Lab 6.
+//Lab 6.1.
 class Calculator {
     constructor() {
         this.id = Date.now()

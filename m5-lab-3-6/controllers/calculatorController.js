@@ -1,4 +1,4 @@
-//Lab 6.
+//Lab 6.1.
 const Calculator = require('../library/calculator');
 
 const addNumbers = (req, res) => {
