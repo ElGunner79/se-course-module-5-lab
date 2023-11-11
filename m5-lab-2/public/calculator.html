@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <title>Calculator</title>
+</head>
+
+<body>
+
+    <form id="calculator">
+        <label for="num1">Number 1:</label>
+        <input type="number" id="num1" name="num1" required>
+        <br>
+        <label for="num2">Number 2:</label>
+        <input type="number" id="num2" name="num2" required>
+        <br>
+        <button type="submit">Add</button>
+    </form>
+
+    <div>Result
+        <span id="result"></span>
+    </div>
+
+    <script>
+        document.getElementById('calculator').addEventListener('submit', function(event) {
+            event.preventDefault();
+            let num1 = document.getElementById('num1').value;
+            let num2 = document.getElementById('num2').value;
+            fetch(`/calculator/add?num1=${num1}&num2=${num2}`)
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById("result").innerHTML = data.result;
+                })
+        });
+
+    </script>
+</body>
+
+</html>
